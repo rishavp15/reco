@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+        .main{width: 120vh;padding: 50px;color: white;display: flex; flex-direction: column ;justify-content: space-between;align-items: center;
+        }
+        body{
+            background-color: rgba(20, 10, 40, 0.8);display: flex;justify-content: center;
+        }
+        .window{
+            height: auto;
+            padding: 40px 150px;
+            background-color: rgb(14, 10, 10, 0.5);
+            margin: 40px;
+        }
+        .windowDirector{
+            color: white;
+        }
+        .my-btn{
+            height: auto;
+            margin: 40px;
+            padding: 40px 150px;
+            width: 100%;
+            align-items: center;
+        }
+        .checkbtn{
+            display: flex;flex-direction: row;gap: 50px;padding-top: 12px;
+        }
+        .window1, .window2, .window3, .window4{
+            text-align: center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <form action="{% url 'match_the_vibe' %}" method="post">
+            {% csrf_token %}
+        <div class="window">
+            <h3>Guess the Title:</h3>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="title" placeholder="Any Moive name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              </div>
+        </div>
+
+        <div class="window" id="window1">
+            <h3>Select Genre:</h3>  
+                <div class="checkbtn">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="check1" name="genre" value="Horror">
+                        <label class="form-check-label" for="check1">Horror</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="check2" name="genre" value="Comedy" checked>
+                        <label class="form-check-label" for="check2">Comedy</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="check3" name="genre" value="Romance">
+                        <label class="form-check-label" for="check3">Romance</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="check4" name="genre" value="Action" checked>
+                        <label class="form-check-label" for="check4">Action</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="check5" name="genre" value="Drama" checked>
+                        <label class="form-check-label" for="check5">Drama</label>
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="window">
+            <h3>Any Word coming in your mind:</h3>
+            <div class="input-group mb-3">
+                <input type="text" name="keywords" class="form-control" placeholder="Forest Tribals Animals" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              </div>
+        </div>
+        
+        <div class="window">
+            <h3>Select Cast:</h3>
+            <div class="input-group mb-3">
+                <input type="text" name="cast" class="form-control" placeholder="Forest Tribals Animals" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              </div>
+            
+        </div>
+        
+        <div class="window">
+            <h3>Enter name of director:</h3>
+            <div class="input-group mb-3">
+                <input type="text" name="director" class="form-control" placeholder="Forest Tribals Animals" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              </div>
+            
+        </div>
+        
+        
+        <div class="my-btn">
+            <button id="window4_button" href="{ url 'match_the_vibe2'}" type="submit">Submit</button>
+        </div>
+    </form>
+
+   
+    </div>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

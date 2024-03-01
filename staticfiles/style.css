@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0000001a;
+    overflow: hidden;
+    display: initial;
+}
+.main{
+    height: 103vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    
+}
+
+
+.list-text-container {
+    text-align: center;
+}
+
+.list-text-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-text-container li {
+    transition: transform 0.3s;
+    cursor: pointer;
+    font-size: 1.2em; /* Base font size */
+    margin-bottom: 0.5em; /* Spacing between list items */
+}
+
+.list-text-container li:hover {
+    transform: scale(1.2);
+}
+
+.rlist{
+    padding-bottom: 85px;
+    height: 56vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.rbottom{
+    height: 12vh;
+    background-color: seagreen;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.rbottom h1{
+    font-size: 36px;
+}
+
+@media (max-width: 600px) {
+    /* Responsive styling for smaller screens */
+    .list-text-container li {
+      font-size: 1em; /* Adjust font size for smaller screens */
+   }
+}
+
+.window-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    top: -400px; /* Start the window off-screen */
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    color: black;
+    text-align: center;
+  }
+
+  .window-content {
+    margin-bottom: 20px;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+.mr-selctor{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
